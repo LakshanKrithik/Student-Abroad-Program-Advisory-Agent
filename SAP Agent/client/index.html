@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP Agent</title>
+  <meta name="description" content="SAP Agent - Your intelligent voice assistant">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Ambient Background Blobs -->
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-badge">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    </div>
+    <h1>SAP Agent</h1>
+  </header>
+
+  <!-- Main Stage -->
+  <div class="stage">
+    <!-- Status Badge -->
+    <div class="status-badge-container">
+      <span class="status-badge" id="status-text">Ready for your session. Click to start.</span>
+    </div>
+
+    <!-- Sphere Wrapper -->
+    <div class="sphere-wrapper" id="sphereWrapper">
+      <!-- Ping rings, shown when active -->
+      <div class="ping-ring ping-ring-1" id="pingRing1"></div>
+      <div class="ping-ring ping-ring-2" id="pingRing2"></div>
+      <!-- The orb -->
+      <div class="sphere" id="orb">
+        <div class="sphere-gloss"></div>
+      </div>
+    </div>
+
+    <!-- Visualizer -->
+    <div class="visualizer" id="visualizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <!-- Footer Controls -->
+  <div class="footer-controls">
+    <button class="cta-button" id="ctaButton" aria-label="Start or stop call">
+      <!-- Mic icon (default) -->
+      <svg id="iconMic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+        <line x1="12" y1="19" x2="12" y2="23"></line>
+        <line x1="8" y1="23" x2="16" y2="23"></line>
+      </svg>
+      <!-- PhoneOff icon (active state) -->
+      <svg id="iconPhoneOff" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path
+          d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.42 19.42 0 0 1 4.26 8.28a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L10.68 13.31z">
+        </path>
+        <line x1="23" y1="1" x2="1" y2="23"></line>
+      </svg>
+    </button>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
